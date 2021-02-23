@@ -1,24 +1,27 @@
 package LAB8;
 
-public class Employee extends Person{
+public class Employee extends Person {
     //Class Attributes
-    private String empID;
+    private String empID; //รหัสพนักงาน
     private String position;
     private double salary;
-    //Constyruster
-
+    //constructors
 
     public Employee() {
     }
 
-    public Employee(String pid, String name, int age, String gender, String tel, String empID, String position, double salary) {
+    public Employee(String pid, String name
+            , int age, String gender, String tel,
+                    String empID, String position,
+                    double salary) {
+
+        // calling constructor of super-class
         super(pid, name, age, gender, tel);
+
         this.empID = empID;
         this.position = position;
         this.salary = salary;
     }
-
-
     //getter and setter
 
     public String getEmpID() {
@@ -45,7 +48,7 @@ public class Employee extends Person{
         this.salary = salary;
     }
 
-    //toSring()
+    //toString()
 
     @Override
     public String toString() {
@@ -55,4 +58,6 @@ public class Employee extends Person{
                 ", salary=" + salary +
                 "} " + super.toString();
     }
+
+
 }
